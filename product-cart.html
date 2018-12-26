@@ -1,0 +1,68 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="product-cart">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+   
+  </template>
+  
+  <script>
+    /**
+     * `product-cart`
+     * 
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class ProductCart extends Polymer.Element {
+      static get is() { return 'product-cart'; }
+      static get properties() {
+        return {
+          productList:{
+            type:Array,
+            value(){
+              return [
+
+              ];
+            },
+            observer:'productListChanged'
+          },
+          product:{
+            type:Object,
+            value(){
+              return{
+
+              }
+            },
+            observer:"productChanged"
+          }
+        };
+      }
+
+      productListChanged(){
+        this.dispatchEvent(new CustomEvent("product-added",{
+           bubbles:false,
+           composed:false,
+           detail:this.productList
+        }));
+      }
+
+      productChanged(){
+        this.push("productList",this.product);
+      }
+
+      getListLength(){
+       return this.productList.length;
+      }
+
+
+    }
+
+    window.customElements.define(ProductCart.is, ProductCart);
+  </script>
+</dom-module>

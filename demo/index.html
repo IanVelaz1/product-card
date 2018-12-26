@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>product-cart demo</title>
+
+    <script src="../../webcomponentsjs/webcomponents-loader.js"></script>
+
+    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+    <link rel="import" href="../product-cart.html">
+
+    <custom-style>
+      <style is="custom-style" include="demo-pages-shared-styles">
+      </style>
+    </custom-style>
+  </head>
+  <body>
+    <div class="vertical-section-container centered">
+      <h3>Basic product-cart demo</h3>
+      <demo-snippet>
+        <template>
+          <product-cart></product-cart>
+          <button id="btn-1">Add product</button>
+        </template>
+        <script>
+         let cart=document.querySelector("product-cart");
+         let arrCarrito=[];
+         
+         document.querySelector("#btn-1").addEventListener("click",(event)=>{
+          arrCarrito.push(1+1);
+          cart.setAttribute("productList",JSON.stringify(arrCarrito));
+         });
+        
+        </script>
+      </demo-snippet>
+    </div>
+  </body>
+</html>
