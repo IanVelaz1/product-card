@@ -1,5 +1,5 @@
 # \<product-cart\>
-
+[![Build status](https://travis-ci.com/jusolete/product-card.svg?branch=master)](https://travis-ci.org/jusolete/product-card)
 ## variables in the product cart
 ```
 productList
