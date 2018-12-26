@@ -1,0 +1,26 @@
+{
+  "name": "product-cart",
+  "main": "product-cart.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^2.0.0"
+  },
+  "devDependencies": {
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^2.0.0",
+    "web-component-tester": "Polymer/web-component-tester#^6.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0"
+  },
+  "resolutions": {
+    "polymer": "^2.0.0"
+  },
+  "homepage": "https://github.com/jusolete/product-card",
+  "_release": "cb7646d9cd",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "cb7646d9cda07b901db81251b6684382ae325151"
+  },
+  "_source": "https://github.com/jusolete/product-card.git",
+  "_target": "*",
+  "_originalSource": "jusolete/product-card",
+  "_direct": true
+}

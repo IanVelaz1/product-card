@@ -1,4 +1,5 @@
 <link rel="import" href="../polymer/polymer-element.html">
+<link rel="import" href="../polymer/lib/elements/dom-repeat.html">
 
 <dom-module id="product-cart">
   <template>
@@ -7,9 +8,14 @@
         display: block;
       }
     </style>
-   
+   <ul>
+     <template is="dom-repeat" items="[[productList]]" as="product">
+        <li>[[product.name]]</li>
+     </template>
+     
+   </ul>
   </template>
-  
+
   <script>
     /**
      * `product-cart`
@@ -31,15 +37,6 @@
               ];
             },
             observer:'productListChanged'
-          },
-          product:{
-            type:Object,
-            value(){
-              return{
-
-              }
-            },
-            observer:"productChanged"
           }
         };
       }
@@ -50,14 +47,6 @@
            composed:false,
            detail:this.productList
         }));
-      }
-
-      productChanged(){
-        this.push("productList",this.product);
-      }
-
-      getListLength(){
-       return this.productList.length;
       }
 
 
