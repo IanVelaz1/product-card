@@ -1,6 +1,19 @@
 # \<product-cart\>
 
+## variables in the product cart
+```
+productList
+```
 
+## Install bower
+```
+$ npm i bower
+```
+
+## Run bower install
+```
+$ bower i
+```
 
 ## Install the Polymer-CLI
 
