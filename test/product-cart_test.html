@@ -12,39 +12,18 @@
     <link rel="import" href="../product-cart.html">
   </head>
   <body>
-
-    <test-fixture id="BasicTestFixture">
+    <test-fixture id="changeArrayFixture">
       <template>
-        <product-cart></product-cart>
-      </template>
-    </test-fixture>
-
-    <test-fixture id="ChangedPropertyTestFixture">
-      <template>
-        <product-cart prop1="new-prop1"></product-cart>
+        <product-cart ></product-cart>
       </template>
     </test-fixture>
 
     <script>
       suite('product-cart', () => {
-
-        test('instantiating the element with default properties works', () => {
-          const element = fixture('BasicTestFixture');
-          assert.equal(element.prop1, 'product-cart');
-          const elementShadowRoot = element.shadowRoot;
-          const elementHeader = elementShadowRoot.querySelector('h2');
-          assert.equal(elementHeader.innerHTML, 'Hello product-cart!');
+        test('checking the productListProperty works', () => {
+          const element = fixture('changeArrayFixture');
+          assert.equal(element.productList.length,0);
         });
-
-        test('setting a property on the element works', () => {
-          // Create a test fixture
-          const element = fixture('ChangedPropertyTestFixture');
-          assert.equal(element.prop1, 'new-prop1');
-          const elementShadowRoot = element.shadowRoot;
-          const elementHeader = elementShadowRoot.querySelector('h2');
-          assert.equal(elementHeader.innerHTML, 'Hello new-prop1!');
-        });
-
       });
     </script>
 
