@@ -13,14 +13,13 @@
     "polymer": "^2.0.0"
   },
   "homepage": "https://github.com/jusolete/product-card",
-  "_release": "cb7646d9cd",
+  "_release": "8899acf39c",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "cb7646d9cda07b901db81251b6684382ae325151"
+    "commit": "8899acf39cd6d88b111179109f01f494d4715b16"
   },
   "_source": "https://github.com/jusolete/product-card.git",
   "_target": "*",
-  "_originalSource": "jusolete/product-card",
-  "_direct": true
+  "_originalSource": "jusolete/product-card"
 }
